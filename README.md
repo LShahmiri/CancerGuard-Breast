@@ -127,9 +127,8 @@ ensure a fair comparison.
 
 ---
 
-## Running an Experiment
 
-Example: Run MIGT RGB experiment
 
-```bash
-python experiments/run_migt_rgb.py --config configs/migt_rgb.yaml
+
+
+
