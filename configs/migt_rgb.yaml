@@ -1,0 +1,90 @@
+
+# ===============================
+# Experiment: MIGT RGB
+# ===============================
+
+experiment:
+  name: migt_rgb
+  description: >
+    Breast cancer histopathology classification using Xception
+    with Mutual Information Guided Training (MIGT)
+    on RGB-selected samples.
+
+# -------------------------------
+# Dataset configuration
+# -------------------------------
+dataset:
+  name: BreaKHis
+  base_dir: data/MIGT_DATASET_RGB
+  train_dir: train
+  val_dir: val
+  test_dir: test
+  color_mode: rgb
+  num_classes: 2
+  class_mode: binary
+
+# -------------------------------
+# Image & DataLoader settings
+# -------------------------------
+data:
+  img_size: [224, 224]
+  batch_size: 32
+  shuffle: true
+  seed: 42
+  augmentation:
+    horizontal_flip: true
+    rotation: 0.10
+    zoom: 0.15
+    contrast: 0.10
+
+# -------------------------------
+# Model configuration
+# -------------------------------
+model:
+  architecture: xception
+  pretrained: imagenet
+  include_top: false
+  dropout: 0.3
+
+# -------------------------------
+# Training (Stage 1: Head)
+# -------------------------------
+training:
+  epochs: 100
+  optimizer: adam
+  learning_rate: 0.001
+  loss: binary_crossentropy
+  metrics:
+    - accuracy
+    - auc
+  early_stopping:
+    monitor: val_loss
+    patience: 6
+
+# -------------------------------
+# Fine-tuning (Stage 2)
+# -------------------------------
+fine_tuning:
+  enabled: true
+  unfreeze_last_layers: 30
+  learning_rate: 0.00001
+  epochs: 20
+  freeze_batch_norm: true
+
+# -------------------------------
+# Evaluation
+# -------------------------------
+evaluation:
+  threshold: 0.5
+  metrics:
+    - confusion_matrix
+    - classification_report
+    - roc_curve
+
+# -------------------------------
+# Output paths
+# -------------------------------
+output:
+  save_dir: outputs/migt_rgb
+  save_best_model: true
+  save_full_model: true
