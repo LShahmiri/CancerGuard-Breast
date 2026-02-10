@@ -83,11 +83,14 @@ MIGT distributes samples based on their **mutual information content**, ensuring
 
 MIGT achieves **high recall for malignant cases** while maintaining stable training and validation behaviour.
 
-<p align="center"> <img width="846" height="393" alt="11" src="https://github.com/user-attachments/assets/31cc7aed-1c0d-4994-a25c-760313aab220" />
+<p align="center">
+<img width="846" height="393" alt="11" src="https://github.com/user-attachments/assets/31cc7aed-1c0d-4994-a25c-760313aab220" />
 
 <img width="855" height="393" alt="22" src="https://github.com/user-attachments/assets/ed547124-e743-416e-bc62-01a87d2d546c" />
 
-<img width="498" height="416" alt="23" src="https://github.com/user-attachments/assets/66efc9a1-65d2-4e0d-9d54-c97eb8a3aa82" /> </p>
+<img width="498" height="416" alt="23" src="https://github.com/user-attachments/assets/66efc9a1-65d2-4e0d-9d54-c97eb8a3aa82" /> 
+
+</p>
 
 
 ---
