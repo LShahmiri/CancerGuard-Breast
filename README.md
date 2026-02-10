@@ -1,5 +1,8 @@
 ## 🧠 Breast Cancer Histopathology Classification using Xception and MIGT
 
+<img width="1021" height="683" alt="1q" src="https://github.com/user-attachments/assets/12da538d-d185-4f83-af8d-f5fa8956aa27" />
+
+
 This repository implements a complete deep learning pipeline for **breast cancer histopathology image classification** using **Mutual Information Guided Training (MIGT)** and a fine-tuned **Xception convolutional neural network**.
 
 The primary objective is to investigate how **guided dataset partitioning** influences model generalisation in comparison with **random dataset splitting**, using the **BreaKHis** dataset as a benchmark.
