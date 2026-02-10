@@ -147,8 +147,3 @@ Although both methods achieve strong performance, **MIGT provides better control
 
 ---
 
-### 👩‍🔬 Author
-**Lida Shahmiri**  
-PhD Researcher – Computer Vision & Deep Learning  
-Open University, UK  
-GitHub: https://github.com/LShahmiri
